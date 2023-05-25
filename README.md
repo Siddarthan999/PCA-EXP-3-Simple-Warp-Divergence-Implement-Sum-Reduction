@@ -7,7 +7,7 @@ Compare the performance of the kernel "reduceUnrolling8" and the newly implement
 * Implement the "reduceUnrolling16" kernel to handle 16 data blocks per thread.
 * Execute the "reduceUnrolling8" and "reduceUnrolling16" kernels with the same input data size and execution configurations.
 * Use proper metrics and events with "nvprof" to analyze the performance of each kernel.
-## PROGRAM:
+## Program:
 reduceInteger.cu:
 ```
 #include "common.h"
@@ -619,7 +619,7 @@ reduceSmemUnroll16   : 133554970 <<<grid 2048 block 128>>>
 reduceSmemDynUnroll16: 133554970 <<<grid 2048 block 128>>>
 Test failed!
 ```
-## EXPLANATION:
+## Explanation:
 * Using nvprof metrics and events, the reduceUnrolling8 kernel achieved a reduction result of 267424728, while the reduceUnrolling16 kernel achieved a reduction result of 133554970.
 * The reduceUnrolling16 kernel demonstrated a difference in performance compared to reduceUnrolling8, and further analysis using nvprof is necessary to determine the specific factors contributing to this performance variation.
 ## Result:
